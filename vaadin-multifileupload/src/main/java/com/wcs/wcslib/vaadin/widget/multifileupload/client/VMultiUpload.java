@@ -227,8 +227,9 @@ public class VMultiUpload extends SimplePanel implements Paintable {
                     // TODO poll for start or modify response so that we
                     // receive headers received
                     client.sendPendingVariableChanges();
+                    client.updateVariable(paintableId, "ready", true, true);
                 }
-            }.schedule(700);
+            }.schedule(700);           
         }
     }
 
